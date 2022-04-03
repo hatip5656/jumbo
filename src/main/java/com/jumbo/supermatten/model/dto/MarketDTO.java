@@ -1,8 +1,10 @@
 package com.jumbo.supermatten.model.dto;
 
+import java.io.Serializable;
 import lombok.Data;
 @Data
-public class MarketDTO {
+public class MarketDTO implements Serializable {
+    private static final long serialVersionUID = -2897472283102333473L;
     private long id;
     private String city;
     private String postalCode;
