@@ -19,6 +19,7 @@ import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+
 public class MarketServiceImplTest {
 
     @Mock
@@ -81,12 +82,12 @@ public class MarketServiceImplTest {
         MarketDTO market2 = new MarketDTO();
         market2.setLatitude(5.3748);
         market2.setLongitude(6.54363);
-        when(mapper.toListDTO(any())).thenReturn(Arrays.<MarketDTO>asList(market1,market2));
+        when(mapper.toListDTO(any())).thenReturn(Arrays.<MarketDTO>asList(market1, market2));
         when(haversineService.getDistance(anyDouble(), anyDouble(), anyDouble(), anyDouble())).thenReturn(
             0);
 
         List<MarketDTO> result = marketServiceImpl.findNearMarkets((double) 1.65650, (double) 6.54363);
-        Assert.assertEquals(List.<MarketDTO>of(market1,market2), result);
+        Assert.assertEquals(List.<MarketDTO>of(market1, market2), result);
     }
 }
 
