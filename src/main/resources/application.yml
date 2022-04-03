@@ -1,0 +1,22 @@
+
+spring:
+  application:
+    name: jumbo
+  datasource:
+    url: jdbc:mysql://localhost:3306/jumbo
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 10
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  servlet:
+    context-path: /jumbo
+  port: 8080
+logging:
+  level:
+    root: INFO
