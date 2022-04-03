@@ -72,6 +72,7 @@ public class MarketServiceImplTest {
     @Test
     public void testDeleteById() throws Exception {
         marketServiceImpl.deleteById(1L);
+        verify(marketRepository, times(1)).deleteById(1L);
     }
 
     @Test
