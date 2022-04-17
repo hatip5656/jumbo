@@ -2,9 +2,6 @@ package com.jumbo.supermatten.mapper;
 
 import java.util.List;
 
-/**
- * @author Burak Naroğlu
- */
 
 public interface BaseMapper<Entity, DTO> {
 
